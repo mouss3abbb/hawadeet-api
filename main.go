@@ -38,6 +38,8 @@ func getspecificHawadeet (status string) ([]hadoota,error) {
 func main()  {
 	r := gin.Default()
 
+	r.GET("",func(){})
+	
 	r.GET("/show-all",func (c *gin.Context){
 		c.IndentedJSON(http.StatusOK, hawadeet)
 	})
