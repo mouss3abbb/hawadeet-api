@@ -12,13 +12,7 @@ type hadoota struct{
 	Status		string		`json:"status"`
 	Body		string		`json:"body"`
 }
-var hawadeet = []hadoota{
-	{Status:"Motivational",Body: "Go die"},
-	{Status:"Motivational",Body: "Go die"},
-	{Status:"Motivational",Body: "No no live"},
-	{Status:"Love",Body: "Just stay"},
-	{Status:"Sad",Body: "You died?"},
-}
+var hawadeet = []hadoota{}
 
 
 
@@ -38,8 +32,10 @@ func getspecificHawadeet (status string) ([]hadoota,error) {
 func main()  {
 	r := gin.Default()
 
-	r.GET("/",func(){})
-	
+	r.GET("/",func (c *gin.Context)  {
+		
+	})
+
 	r.GET("/show-all",func (c *gin.Context){
 		c.IndentedJSON(http.StatusOK, hawadeet)
 	})
