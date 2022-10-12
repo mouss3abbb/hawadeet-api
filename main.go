@@ -14,6 +14,15 @@ type hadoota struct{
 }
 var hawadeet = []hadoota{}
 
+func isEmpty(s string)(bool){
+	spaces := 0
+	for i := 0; i < len(s); i++{
+		if s[i] == ' '{
+			spaces+=1
+		}
+	}
+	return (spaces == len(s))
+}
 
 
 func getspecificHawadeet (status string) ([]hadoota,error) {
@@ -48,6 +57,9 @@ func main()  {
 	r.POST("/add-hadoota",func (c *gin.Context){
 		var newHadoota hadoota
 		if err := c.BindJSON(&newHadoota); err != nil{
+			return
+		}
+		if isEmpty(newHadoota.Body){
 			return
 		}
 		hawadeet = append(hawadeet, newHadoota)
