@@ -1,0 +1,20 @@
+
+    "name": "hawadeet-api",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "build": "echo \"No build specified\" && exit 1",
+        "test": "echo \"No test specified\" && exit 1",
+        "start": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mouss3abbb/hawadeet-api.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/mouss3abbb/hawadeet-api/issues"
+    },
+    "homepage": "https://github.com/mouss3abbb/hawadeet-api#readme"
+}
